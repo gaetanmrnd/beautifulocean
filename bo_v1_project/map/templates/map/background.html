@@ -1,0 +1,12 @@
+{% load staticfiles %}
+{% load leaflet_tags %}
+
+<head>
+    {% leaflet_js %}
+    {% leaflet_css %}
+    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+</head>
+
+<body>
+    {% leaflet_map "yourmap" %}
+</body>
