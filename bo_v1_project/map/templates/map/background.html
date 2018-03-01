@@ -1,12 +1,31 @@
 {% load staticfiles %}
 {% load leaflet_tags %}
 
-<head>
-    {% leaflet_js %}
-    {% leaflet_css %}
-    <link rel="stylesheet" href="{% static 'css/map.css' %}">
-</head>
+<!DOCTYPE html>
 
-<body>
-    {% leaflet_map "yourmap" %}
-</body>
+<html>
+
+	<head>
+	    {% leaflet_js %}
+	    {% leaflet_css %}
+	    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+
+		<title>Leaflet Web Map</title>
+
+
+	</head>
+
+	<body>
+
+		{% leaflet_map "mainmap" %}
+
+		<script type="text/javascript">
+		    window.addEventListener("map:init", function (e) {
+		        var detail = e.detail;
+		        L.marker([50.5, 30.5]).addTo(detail.map);
+		    }, false);
+		</script>
+
+	</body>
+
+</html>

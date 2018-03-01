@@ -121,6 +121,7 @@ LEAFLET_CONFIG = {
     'DEFAULT_ZOOM': 11,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 18,
+    'RESET_VIEW': False,
 }
 
 
@@ -128,4 +129,4 @@ LEAFLET_CONFIG = {
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
