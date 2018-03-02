@@ -22,9 +22,13 @@
 		<script type="text/javascript">
 		    window.addEventListener("map:init", function (e) {
 		        var detail = e.detail;
-		        L.marker([50.5, 30.5]).addTo(detail.map);
+		        {% for wreck in wrecks %}
+		         	L.marker([{{ wreck.lat }}, {{ wreck.lon }}]).addTo(detail.map);
+		        {% endfor %}
 		    }, false);
 		</script>
+
+
 
 	</body>
 

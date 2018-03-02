@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Wreck
+from .models import Obstacle
 
-admin.site.register(Wreck)
+admin.site.register(Obstacle)
